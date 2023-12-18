@@ -66,4 +66,4 @@ bash
 
 bash
 - docker build -t my-app .
-- docker run -p 5000:5000 my-app
+- docker run -p 8000:7860 my-app
