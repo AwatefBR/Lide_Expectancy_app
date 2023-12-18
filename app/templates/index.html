@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="fr"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="INTUITIVE">
+    <meta name="description" content="">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="../static/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../static/Accueil.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../static/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../static/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.0.3, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Accueil">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="fr"><header class="u-clearfix u-gradient u-header u-header" id="sec-c8c2"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-text u-text-default u-text-1">AwatefBR</p>
+        <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-default u-text-2">Life Expectancy Prediction&nbsp;</h2>
+      </div></header>
+    <section class="u-align-center u-clearfix u-gradient u-section-1" id="carousel_05a6">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-custom-font u-font-oswald u-text u-text-default u-text-1">Fill the needed data to predict the Life Expectancy&nbsp;</h2>
+        <div class="u-border-2 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
+        <div class="u-form u-form-1">
+          <form action="/predict/" method="post">
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-1">
+              <label for="select-2db6" class="u-label u-label-1">Select a Year</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-2db6" name="year" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a Year</option>
+                  {% for yearValue in year %}
+                  <option value="{{ yearValue }}">{{ yearValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-2">
+              <label for="select-e000" class="u-label u-label-2">Select a value for Polio</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-e000" name="polio" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Polio</option>
+                  {% for polioValue in polio %}
+                      <option value="{{ polioValue }}">{{ polioValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-3">
+              <label for="select-2e8a" class="u-label u-label-3">Select a Status</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-2e8a" name="status" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a Status</option>
+                  {% for statusValue in status %}
+                      <option value="{{ statusValue }}">{{ statusValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-4">
+              <label for="select-a8a1" class="u-label u-label-4">Select a value for Total Expenditure</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-a8a1" name="totalExpenditure" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Total Expenditure</option>
+                  {% for totalExpenditureValue in totalExpenditure %}
+                      <option value="{{ totalExpenditureValue }}">{{ totalExpenditureValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-5">
+              <label for="select-9728" class="u-label u-label-5">Select a value for Adult Mortality</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-9728" name="adultmortality" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Adult Mortality</option>
+                  {% for adultmortalityValue in adultmortality %}
+                      <option value="{{ adultmortalityValue }}">{{ adultmortalityValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-6">
+              <label for="select-b278" class="u-label u-label-6">Select a value for Diphtheria</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-b278" name="diphtheria" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Diphtheria</option>
+                  {% for diphtheriaValue in diphtheria %}
+                      <option value="{{ diphtheriaValue }}">{{ diphtheriaValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-7">
+              <label for="select-6b9e" class="u-label u-label-7">Select a value for Alcohol</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-6b9e" name="alcohol" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Alcohol</option>
+                  {% for alcoholValue in alcohol %}
+                      <option value="{{ alcoholValue }}">{{ alcoholValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-8">
+              <label for="select-0ad9" class="u-label u-label-8">Select a value for HIV/AIDS</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-0ad9" name="hivAids" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for HIV/AIDS</option>
+                  {% for hivAidsValue in hivAids %}
+                      <option value="{{ hivAidsValue }}">{{ hivAidsValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-9">
+              <label for="select-5afe" class="u-label u-label-9">Select a value for Hepatitis B</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-5afe" name="hepatitisB" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Hepatitis B</option>
+                  {% for hepatitisBValue in hepatitisB %}
+                     <option value="{{ hepatitisBValue }}">{{ hepatitisBValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-10">
+              <label for="text-8032" class="u-label u-label-10">Enter a value for GDP (inferior to 120K)</label>
+              <input type="number" placeholder="" id="text-8032" name="gdp" class="u-input u-input-rectangle" required>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-11">
+              <label for="text-b49b" class="u-label u-label-11">Enter a value for Measles (inferior to 120K)</label>
+              <input type="number" placeholder="" id="text-b49b" name="measles" class="u-input u-input-rectangle" required>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-12">
+              <label for="text-3cea" class="u-label u-label-12">Enter a value for Population (inferior to 1.2 billion)</label>
+              <input type="number" placeholder="" id="text-3cea" name="population" class="u-input u-input-rectangle" required>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-13">
+              <label for="select-703d" class="u-label u-label-13">Select a value for BMI</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-703d" name="bmi" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for BMI</option>
+                  {% for bmiValue in bmi %}
+                      <option value="{{ bmiValue }}">{{ bmiValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-14">
+              <label for="select-8dc1" class="u-label u-label-14">Select a value for Thinness 1-19 Years</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-8dc1" name="thinness1to19Years" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Thinness 1-19 Years</option>
+                  {% for thinness1to19YearsValue in thinness1to19Years %}
+                      <option value="{{ thinness1to19YearsValue }}">{{ thinness1to19YearsValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-15">
+              <label for="select-95d4" class="u-label u-label-15">Select a value for Under-Five Deaths</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-95d4" name="underFiveDeaths" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Under-Five Deaths</option>
+                  {% for underFiveDeathsValue in underFiveDeaths %}
+                      <option value="{{ underFiveDeathsValue }}">{{ underFiveDeathsValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-16">
+              <label for="select-7c35" class="u-label u-label-16">Select a value for Income Composition of Resources</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-7c35" name="incomeComposition" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Income Composition of Resources</option>
+                  {% for incomeCompositionValue in incomeComposition %}
+                      <option value="{{ incomeCompositionValue }}">{{ incomeCompositionValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-form-group u-form-select u-label-top u-form-group-17">
+              <label for="select-b868" class="u-label u-label-17">Select a value for Schooling</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-b868" name="schooling" class="u-input u-input-rectangle" required>
+                  <option value="" disabled selected>Select a value for Schooling</option>
+                  {% for schoolingValue in schooling %}
+                      <option value="{{ schoolingValue }}">{{ schoolingValue }}</option>
+                  {% endfor %}
+                </select>
+                <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+              </div>
+            </div>
+            <div class="u-align-left u-form-group u-form-submit u-label-top">
+              <a href="#" class="u-border-8 u-border-grey-75 u-btn u-btn-round u-btn-submit u-button-style u-palette-4-dark-2 u-radius u-btn-1">Predict</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
+            <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
+            <input type="hidden" value="" name="recaptchaResponse">
+            <input type="hidden" name="formServices" value="98bbb880-c729-86c6-b2c8-d2b61d96e8d7">
+          </form>
+        </div>
+      </div>
+      <form id="predictionForm" action="/predict/" method="post" onsubmit="predict(); return false;">
+        <input type="submit" value="Predict">            
+      </form>
+      <div id="predictionResult"></div>
+    </section>
+    <footer class="u-align-center u-clearfix u-footer u-gradient u-footer" id="sec-49c9"><div class="u-clearfix u-sheet u-sheet-1"></div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  </div>
+  <script>
+      async function predict() {
+          const form = document.getElementById('predictionForm');
+          const formData = new FormData(form);
+  
+          const data = {};
+          formData.forEach((value, key) => {
+              data[key] = value;
+          });
+  
+          const response = await fetch('/predict/', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: new URLSearchParams(data).toString()
+          });
+  
+          const result = await response.json();
+          document.getElementById('predictionResult').innerText = `Predicted Life Expectancy: ${result.prediction}`;
+      }
+  </script>  
+</body>
+</html>
